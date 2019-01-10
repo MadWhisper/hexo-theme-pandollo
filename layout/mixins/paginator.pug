@@ -4,10 +4,10 @@ mixin forList()
     .pagination
         if page.prev
             a.pagination__link.pagination__prev(href=url_for(prev))
-                != __('prev')
+                != __('上一页')
         if page.next
             a.pagination__link.pagination__next(href=url_for(next))
-                != __('next')
+                != __('下一页')
 
 mixin forPost()
     - var prev = page.prev ? page.prev.path : false;
@@ -15,7 +15,7 @@ mixin forPost()
     .pagination
         if prev
             a.pagination__link.pagination__prev(href=url_for(prev))
-                != __('prev_post')
+                != __('上一篇')
         if next
             a.pagination__link.pagination__next(href=url_for(next))
-                != __('next_post')
+                != __('下一篇')
